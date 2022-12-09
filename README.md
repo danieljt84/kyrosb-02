@@ -33,7 +33,7 @@ Projeto desenvolvido para um processo seletivo na Kyros. Enjoy!
 ###### Frontend
 1. Entre no pasta **frontend**
 2. Insira o command **ng build**
-3. Na pasta dis, será gerado os arquivos bundles da aplicação
+3. Na pasta dist, será gerado os arquivos bundles da aplicação
 4. Configure em seu servidor
 
 **Documentação**
