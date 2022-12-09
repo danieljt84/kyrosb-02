@@ -15,6 +15,13 @@ Projeto desenvolvido para um processo seletivo na Kyros. Enjoy!
 + NGZorro
 + Bootstrap 5
 
+## Pré requisito
+
++ Node js
++ Angular Cli
++ Java 11
++ Servidor de aplicação para .war
+
 ## Instalação
 
 ###### Backend
@@ -33,7 +40,7 @@ Projeto desenvolvido para um processo seletivo na Kyros. Enjoy!
 
 ** Documentação
 
-###### Backend
+#### Backend
 
 ** Cadastro Cliente**
 
@@ -207,3 +214,7 @@ Modelo de JSON :
 ** Excluir Lançamento**
 
 > DELETE http://localhost:8080/kyros/lancamento/excluir/{id}
+
+#### Frontend
+
+
