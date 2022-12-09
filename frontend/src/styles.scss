@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+.container-body{
+  width: 95%;
+  margin: auto;
+}
+.ant-notification{
+  z-index: 99999;
+}
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+@import '~ngx-toastr/toastr';
+@import '~ngx-toastr/toastr-bs4-alert';
+

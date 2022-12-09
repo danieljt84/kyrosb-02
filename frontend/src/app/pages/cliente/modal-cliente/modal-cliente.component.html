@@ -1,0 +1,140 @@
+<div class="modal-content">
+  <div class="modal-header">
+    <h4 class="modal-title">Cadastro - Produto</h4>
+    <button
+      type="button"
+      class="close"
+      data-dismiss="modal"
+      aria-hidden="true"
+      (click)="handleCancel()"
+    >
+      &times;
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="modal-container">
+      <form [formGroup]="formCliente">
+        <label>Id</label>
+        <input
+          type="number"
+          id="id"
+          formControlName="id"
+          class="form-control"
+          readonly
+        />
+        <label>Nome</label>
+        <input
+          type="text"
+          id="nome"
+          formControlName="nome"
+          class="form-control"
+        />
+        <div
+          *ngIf="
+            !formCliente.get('nome')?.valid &&
+            (formCliente.get('nome')?.dirty || formCliente.get('nome')?.touched)
+          "
+        >
+          <small *ngIf="formCliente.get('nome')?.hasError('required')"
+            >Nome é necessário</small
+          >
+        </div>
+        <label>Endereço</label>
+        <input
+          type="text"
+          id="endereco"
+          formControlName="endereco"
+          class="form-control"
+        />
+        <div
+          *ngIf="
+            !formCliente.get('endereco')?.valid &&
+            (formCliente.get('endereco')?.dirty ||
+              formCliente.get('endereco')?.touched)
+          "
+        >
+          <small *ngIf="formCliente.get('endereco')?.hasError('required')"
+            >Endereço é necessário</small
+          >
+        </div>
+        <label>Data Nascimento</label>
+        <input
+          id="dataNascimento"
+          formControlName="dataNascimento"
+          type="date"
+          class="form-control"
+        />
+        <div
+          *ngIf="
+            !formCliente.get('dataNascimento')?.valid &&
+            (formCliente.get('dataNascimento')?.dirty ||
+              formCliente.get('dataNascimento')?.touched)
+          "
+        >
+          <small *ngIf="formCliente.get('dataNascimento')?.hasError('required')"
+            >Data Nascimento é necessário</small
+          >
+        </div>
+        <label>Tipo Pessoa</label>
+        <select id="status"  formControlName="tipoPessoa" class="form-control">
+          <option value="FISICA">FISICA</option>
+          <option value="JURIDICA">JURIDICA</option>
+        </select>
+        <ng-container *ngIf="tipoPessoa == 'FISICA'">
+          <label>CPF</label>
+          <input
+            id="cpf"
+            formControlName="cpf"
+            type="number"
+            class="form-control"
+          />
+          <div
+            *ngIf="
+              !formCliente.get('cpf')?.valid &&
+              (formCliente.get('cpf')?.dirty || formCliente.get('cpf')?.touched)
+            "
+          >
+            <small *ngIf="formCliente.get('cpf')?.hasError('required')"
+              >CPF é necessário</small
+            >
+          </div>
+        </ng-container>
+        <ng-container *ngIf="tipoPessoa == 'JURIDICA'">
+          <label>CNPJ</label>
+          <input
+            id="cnpj"
+            formControlName="cnpj"
+            type="number"
+            class="form-control"
+          />
+          <div
+            *ngIf="
+              !formCliente.get('cnpj')?.valid &&
+              (formCliente.get('cnpj')?.dirty || formCliente.get('cnpj')?.touched)
+            "
+          >
+            <small *ngIf="formCliente.get('cnpj')?.hasError('required')"
+              >CNPJ é necessário</small
+            >
+          </div>
+        </ng-container>
+      </form>
+      <div class="modal-footer">
+        <input
+          type="button"
+          class="btn btn-default"
+          data-dismiss="modal"
+          (click)="handleCancel()"
+          value="Cancel"
+        />
+        <input
+          type="submit"
+          class="btn btn-info"
+          [disabled]="!formCliente.valid"
+          (click)="handleOk()"
+          value="Save"
+        />
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+
+  <div #sidebar class="sidebar  pb-3 open">
+    <nav class="navbar bg-color-nav navbar-dark">
+        <div class="navbar-nav w-100">
+            <a [routerLink]="['/cliente']" class="nav-item nav-link active">Cliente</a>
+            <a [routerLink]="['/produto']" class="nav-item nav-link active" data-bs-toggle="dropdown">Produto</a>
+            <a [routerLink]="['/lancamento']" class="nav-item nav-link active" data-bs-toggle="dropdown">Lancamento</a>
+        </div>
+    </nav>
+  </div>
+  <nav class="navbar justify-content-between navbar-expand bg-color-nav navbar-dark sticky-top px-4 py-0">
+    <a (click)="openSideBar()" class="sidebar-toggler flex-shrink-0">
+        <i class="fa fa-bars"></i>
+    </a>
+    <div class="navbar-nav align-items-center ms-auto">
+        <a class="navbar-brand" href="#">
+            <img src="/assets/img/logo.png" width="60" alt="">
+          </a>
+    </div>
+  </nav>
+  <div #content class="content open">
+    <ng-content></ng-content>
+  </div>

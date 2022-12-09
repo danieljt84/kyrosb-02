@@ -1,0 +1,44 @@
+<nz-table #nzTable [nzData]="listToDisplay" nzTableLayout="fixed">
+  <thead>
+    <tr>
+      <th nzCustomFilter>
+        Id
+        <nz-filter-trigger [(nzVisible)]="visible" [nzActive]="searchIdValue.length > 0" [nzDropdownMenu]="menuId">
+          <span nz-icon nzType="search"></span>
+        </nz-filter-trigger>
+      </th>      <th >
+        Nome
+      </th>
+      <th>
+        Descrição
+      </th>
+      <th>Valor Un.</th>
+      <th>Status</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of nzTable.data">
+      <td>{{ data.id }}</td>
+      <td>{{ data.nome }}</td>
+      <td>{{ data.descricao }}</td>
+      <td>{{ data.valorUnidade }}</td>
+      <td>{{ data.status.toString() }}</td>
+      <td>
+        <a (click)="showModal(data)">Exibir</a>
+        <nz-divider nzType="vertical"></nz-divider>
+        <a (click)="excluirProduto(data.id)">Excluir</a>
+      </td>
+    </tr>
+  </tbody>
+</nz-table>
+
+<nz-dropdown-menu #menuId="nzDropdownMenu">
+  <div class="ant-table-filter-dropdown">
+    <div class="search-box">
+      <input type="text" nz-input placeholder="Search name" [(ngModel)]="searchIdValue" />
+      <button nz-button nzSize="small" nzType="primary" (click)="searchId()" class="search-button">Procurar</button>
+      <button nz-button nzSize="small" (click)="resetId()">Cancelar</button>
+    </div>
+  </div>
+</nz-dropdown-menu>

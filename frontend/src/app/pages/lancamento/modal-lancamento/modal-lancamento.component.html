@@ -1,0 +1,66 @@
+<div class="modal-content">
+    <div class="modal-header">
+      <h4 class="modal-title">Cadastro - Produto
+      </h4>
+      <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-hidden="true"
+          (click)="handleCancel()"
+        >
+          &times;
+        </button>
+    </div>
+    <div class="modal-body">
+      <div class="modal-container">
+        <form [formGroup]="formLancamento">
+          <label>Id</label>
+          <input type="number" id="id" formControlName="id" class="form-control" readonly>
+          <label>Cliente Id</label>
+          <input           type="number"
+          id="clienteId" formControlName="clienteId" class="form-control"/>
+          <div *ngIf="!formLancamento.get('clienteId')?.valid && (formLancamento.get('clienteId')?.dirty || formLancamento.get('clienteId')?.touched)">
+            <small *ngIf="formLancamento.get('clienteId')?.hasError('required')">Id do Cliente é necessário</small>
+          </div>
+          <label>Produto Id</label>
+          <input type="number" id="produtoId" formControlName="produtoId" class="form-control"/>
+          <div *ngIf="!formLancamento.get('produtoId')?.valid && (formLancamento.get('produtoId')?.dirty || formLancamento.get('produtoId')?.touched)">
+            <small *ngIf="formLancamento.get('produtoId')?.hasError('required')">Id do Produto é necessário</small>
+          </div>
+          <label>Valor Total</label>
+          <input id="valorTotal" formControlName="valorTotal" type="number" class="form-control"/>
+          <div *ngIf="!formLancamento.get('valorTotal')?.valid && (formLancamento.get('valorTotal')?.dirty || formLancamento.get('valorTotal')?.touched)">
+            <small *ngIf="formLancamento.get('valorTotal')?.hasError('required')">Valor Total é necessário</small>
+          </div>
+          <label>Quantidade Vendida</label>
+          <input id="quantidadeVendida" formControlName="quantidadeVendida" type="number" class="form-control"/>
+          <div *ngIf="!formLancamento.get('quantidadeVendida')?.valid && (formLancamento.get('quantidadeVendida')?.dirty || formLancamento.get('quantidadeVendida')?.touched)">
+            <small *ngIf="formLancamento.get('quantidadeVendida')?.hasError('required')">Quantidade Vendida é necessário</small>
+          </div>
+          <label>Data Venda</label>
+          <input id="dataVenda" formControlName="dataVenda" type="date" class="form-control"/>
+          <div *ngIf="!formLancamento.get('dataVenda')?.valid && (formLancamento.get('dataVenda')?.dirty || formLancamento.get('quantidadeVendida')?.touched)">
+            <small *ngIf="formLancamento.get('dataVenda')?.hasError('required')">Data Venda é necessário</small>
+          </div>
+
+        </form>
+        <div class="modal-footer">
+          <input
+            type="button"
+            class="btn btn-default"
+            data-dismiss="modal"
+            (click)="handleCancel()"
+            value="Cancel"
+          />
+          <input
+            type="submit"
+            class="btn btn-info"
+            [disabled]="!formLancamento.valid"
+            (click)="handleOk()"
+            value="Save"
+          />
+        </div>
+      </div>
+    </div>
+  </div>

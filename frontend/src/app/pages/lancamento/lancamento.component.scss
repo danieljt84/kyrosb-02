@@ -1,0 +1,12 @@
+*{
+    .card{
+      margin-top: 10px;
+      .card-header{
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        background-color: unset;
+        border-bottom: 0;
+      }
+    }
+  }
