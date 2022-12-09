@@ -30,7 +30,7 @@ Projeto desenvolvido para um processo seletivo na Kyros. Enjoy!
 3. Na pasta target, será gerado o .war da aplicação
 4. Configure em seu servidor
 
-## Instalação
+##Instalação
 
 ###### Backend
 1. Entre no pasta **frontend**
@@ -38,11 +38,11 @@ Projeto desenvolvido para um processo seletivo na Kyros. Enjoy!
 3. Na pasta dis, será gerado os arquivos bundles da aplicação
 4. Configure em seu servidor
 
-** Documentação
+**Documentação**
 
 #### Backend
 
-** Cadastro Cliente**
+**Cadastro Cliente**
 
 > POST http://localhost:8080/kyros/cliente/criar
 
@@ -75,7 +75,7 @@ Modelo de JSON para pessoa jurídica:
 
 }
 ```
-** Alterar Cliente**
+**Alterar Cliente**
 
 > PUT http://localhost:8080/kyros/cliente/alterar
 
@@ -110,15 +110,15 @@ Modelo de JSON para pessoa jurídica:
 
 }
 ```
-** Listar Cliente**
+**Listar Cliente**
 
 > GET http://localhost:8080/kyros/cliente/listar
 
-** excluir Cliente**
+**excluir Cliente**
 
 > DELETE http://localhost:8080/kyros/cliente/excluir/{id}
 
-** Cadastro Produto**
+**Cadastro Produto**
 
 > POST http://localhost:8080/kyros/produto/criar
 
@@ -136,7 +136,7 @@ Modelo de JSON :
 
 }
 ```
-** Alterar Produto**
+**Alterar Produto**
 
 > PUT http://localhost:8080/kyros/produto/alterar
 
@@ -156,15 +156,15 @@ Modelo de JSON :
 }
 
 ```
-** Listar Produto**
+**Listar Produto**
 
 > GET http://localhost:8080/kyros/produto/listar
 
-** excluir Produto**
+**Excluir Produto**
 
 > DELETE http://localhost:8080/kyros/produto/excluir/{id}
 
-** Cadastro Lançamento**
+**Cadastro Lançamento**
 
 > POST http://localhost:8080/kyros/lancamento/criar
 
@@ -172,20 +172,20 @@ Modelo de JSON :
 ```
 {
   
-	"clienteId": 0,
+  "clienteId": 0,
   
   "produtoId": 0,
   
   "quantidadeVendida": 10.0,
 
-	"valorTotal": 10.0,
+  "valorTotal": 10.0,
 
   "dataVenda": "2022-01-01"
 
 }
 ```
 
-** Alterar Lançamento**
+**Alterar Lançamento**
 
 > PUT http://localhost:8080/kyros/lancamento/alterar
 
@@ -194,27 +194,24 @@ Modelo de JSON :
 {
   "id": 0,
   
-	"clienteId": 0,
+  "clienteId": 0,
   
   "produtoId": 0,
   
   "quantidadeVendida": 10.0,
 
-	"valorTotal": 10.0,
+  "valorTotal": 10.0,
 
   "dataVenda": "2022-01-01"
 
 }
 ```
 
-** Listar Lançamento**
+**Listar Lançamento**
 
 > GET http://localhost:8080/kyros/lancamento/listar
 
-** Excluir Lançamento**
+**Excluir Lançamento**
 
 > DELETE http://localhost:8080/kyros/lancamento/excluir/{id}
-
-#### Frontend
-
 
