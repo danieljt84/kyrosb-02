@@ -30,8 +30,6 @@ Projeto desenvolvido para um processo seletivo na Kyros. Enjoy!
 3. Na pasta target, será gerado o .war da aplicação
 4. Configure em seu servidor
 
-##Instalação
-
 ###### Backend
 1. Entre no pasta **frontend**
 2. Insira o command **ng build**
@@ -56,7 +54,7 @@ Modelo de JSON para pessoa física:
 
 	"endereco": "Rua 1",
 
-  "cpf": "15001565740"
+        "cpf": "15001565740"
 
 }
 ```
@@ -71,7 +69,7 @@ Modelo de JSON para pessoa jurídica:
 
 	"endereco": "Rua 1",
 
-  "cnpj": "61719371000112"
+        "cnpj": "61719371000112"
 
 }
 ```
@@ -82,7 +80,7 @@ Modelo de JSON para pessoa jurídica:
 Modelo de JSON para pessoa física:
 ```
 {
-  "id": 0,
+        "id": 0,
   
 	"nome": "Nome",
 
@@ -90,7 +88,7 @@ Modelo de JSON para pessoa física:
 
 	"endereco": "Rua 1",
 
-  "cpf": "15001565740"
+        "cpf": "15001565740"
 
 }
 ```
@@ -98,7 +96,7 @@ Modelo de JSON para pessoa física:
 Modelo de JSON para pessoa jurídica:
 ```
 {
-  "id": 0
+        "id": 0
   
 	"nome": "Nome",
 
@@ -106,7 +104,7 @@ Modelo de JSON para pessoa jurídica:
 
 	"endereco": "Rua 1",
 
-  "cnpj": "61719371000112"
+        "cnpj": "61719371000112"
 
 }
 ```
@@ -128,11 +126,11 @@ Modelo de JSON :
   
 	"nome": "PRODUTO",
   
-  "descricao": "DESCRICAO",
+        "descricao": "DESCRICAO",
 
 	"valorUnidade": 10.0,
 
-  "status": "ATIVO"
+         "status": "ATIVO"
 
 }
 ```
@@ -143,15 +141,15 @@ Modelo de JSON :
 Modelo de JSON :
 ```
 {
-  "id":0
+        "id":0
   
 	"nome": "PRODUTO",
   
-  "descricao": "DESCRICAO",
+        "descricao": "DESCRICAO",
 
 	"valorUnidade": 10.0,
 
-  "status": "ATIVO"
+        "status": "ATIVO"
 
 }
 
