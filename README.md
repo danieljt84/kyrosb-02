@@ -112,7 +112,7 @@ Modelo de JSON para pessoa jurídica:
 
 > GET http://localhost:8080/kyros/cliente/listar
 
-**excluir Cliente**
+**Excluir Cliente**
 
 > DELETE http://localhost:8080/kyros/cliente/excluir/{id}
 
