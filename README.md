@@ -30,7 +30,7 @@ Projeto desenvolvido para um processo seletivo na Kyros. Enjoy!
 3. Na pasta target, será gerado o .war da aplicação
 4. Configure em seu servidor
 
-###### Backend
+###### Frontend
 1. Entre no pasta **frontend**
 2. Insira o command **ng build**
 3. Na pasta dis, será gerado os arquivos bundles da aplicação
